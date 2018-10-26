@@ -1,0 +1,133 @@
+footer
+	.footer-contact
+		background: #373737
+		.title-contact
+			text-align: center
+			h2
+				color: yellow	
+			p
+				color: white
+				opacity: .8
+				font-size: 1rem
+		.link
+			text-align: center
+			h2
+				color: yellow
+			h2.hide
+				display: none
+			ul
+				margin-bottom: 0
+				li
+					padding-top: .5rem
+					a
+						font-size: 1rem
+						color: white
+						opacity: .8
+						font-weight: normal
+						i
+					&:hover
+						a
+							text-decoration: underline
+		.item-footer
+			text-align: center
+			margin: 3rem 0
+			padding: 0 1rem
+			ul
+				display: flex
+				text-align: center
+				justify-content: center
+				align-items: center
+				li
+					padding: 0 .3rem
+					a
+						// margin-left: 0px
+						display: block
+						width: 2.5rem
+						height: 2.5rem
+						background: #9b9b9b
+						line-height: 2rem
+						border-radius: 50%
+						i
+							color: black
+							font-size: 1.35rem
+							line-height: 2.5rem
+					&:hover,
+					&:active
+						a
+							opacity: .7s
+							background: #ff0
+							transition: .5s all ease-in-out
+							i
+								color: #000
+		////////
+		
+		+media-breakpoint-up(sm)
+			.link
+				text-align: center
+				h2.hide
+					display: block
+			.item-footer
+				ul
+					margin-top: 3rem
+			.title-contact
+				float: left
+		+media-breakpoint-up(md)
+			.link
+				margin-bottom: 3rem
+				float: right
+			.item-footer
+				margin-top: 5rem
+		+media-breakpoint-up(lg)
+			.link
+				text-align: left
+				margin-bottom: 3rem
+				ul
+					li
+						padding-top: 0
+				h2.hide
+					display: block
+					visibility: hidden
+			.item-footer
+				margin-top: 5rem
+	.item
+		background: yellow
+		padding: 1rem 0
+		.title-footer
+			h3
+				text-align: center
+				font-size: 14px
+		.email
+			.box-email
+				background: black
+				margin-top: 1rem
+				margin: 0 2rem
+				.form-control
+					position: relative
+					background: black
+					border: .5px solid black
+					font-size: 1.3rem
+					padding-left: 1rem
+					padding: 1.4rem 0
+					color: white
+				.btn-more
+					background: white
+					position: absolute
+					right: 0.14rem
+					top: 0.11rem
+					width: 70%
+					font-weight: 700
+					border-radius: 0
+					bottom: 0.11rem
+		+media-breakpoint-up(md)
+			.email
+				padding-top: .5rem
+				.box-email
+					margin: 0
+			.title-footer
+				padding-top: 1rem
+				h3
+					text-align: left
+		+media-breakpoint-up(lg)
+			.title-footer
+				h3
+					text-align: left

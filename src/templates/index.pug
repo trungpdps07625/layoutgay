@@ -1,0 +1,90 @@
+extends _layout/layout
+
+block variables
+	- var title = 'Home'
+	- var description = 'Description for home page'
+	- var bodyclass = 'home'
+
+block body
+	section.home-slider
+		.owl-carousel.owl-theme
+			.item
+				figure
+					img.img-fluid(src="./img/home_slider_1.png", alt="")
+					figcaption
+						h1 Chúng Tôi Là<br>FullStack Vietnam
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>Doloribus dolore optio, quas in<br> dignissimos perferendis.
+						p
+							a(href="#") XEM CHI TIẾT
+
+			.item
+				figure
+					img.img-fluid(src="./img/home_slider_1.png", alt="")
+					figcaption
+						h1 Chúng Tôi Là<br>FullStack Vietnam
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>Doloribus dolore optio, quas in<br> dignissimos perferendis.
+						p
+							a(href="#") XEM CHI TIẾT
+	section.home-banner
+		.container
+			.row
+				.col
+					.owl-carousel.owl-theme
+						-for(i=1;i<4;i++)
+							a(href="javascript:void(0)").item
+								figure
+									img.img-fluid(src="./img/home_banner_1.png", alt="")
+									figcaption
+										h2 USA'S HOTTES JEANS
+										p SHOPPING NOW
+	section.home-news
+		.container
+			.row.title-news
+				.col-lg-12
+					h2 FULLSTACK VIETNAM
+			.row.item-news
+				- for(i=1;i<5;i++)
+					.col-sm-6.col-lg-3
+						a(href="javascript:void(0)")
+							figure
+								.blockimg
+									img.img-fluid(src="./img/home_services_"+i+".png", alt="")
+								figcaption
+									h3 Trung tâm đào tạo IT chuyên nghiệp
+									p $36.6
+	section.home-introduce
+		.container
+			.row
+				.col.mb-5
+					.bg-cover
+						.cap
+							h3 HẠNH PHÚC PHÍA SAU
+							p USA'S HOTTEST JEANS
+						.sale
+							p SALE
+							span 20%
+
+	section.home-content
+		.container
+			.row
+				.col-sm-12.col-lg-5.mb-5
+					figure
+						img.img-fluid(src="./img/home_product_2.png", alt="")
+				.col-sm-12.col-lg-7.mb-5
+					.text
+						h2 HẠNH PHÚC PHÍA SAU 
+						p Want the most stylish designs in metrosexual and gay apparel? Looking for the sexiest gay outfits and pride outfits? Differio has the trendiest gay pride apparel from gay pride clothing to lgbt clothing. Shop our gay menswear collection for the hottest gay pride outfits in gay clothing for men.
+	section.home-clients
+		.container
+			.row
+				.col.title-clients
+					h2 FULLSTACK VIETNAM
+			.row
+				.col-lg-12
+					.owl-carousel.owl-theme
+						-for(i=1;i<10;i++)
+							.item
+								if(i<7)
+									img(src="./img/clients_"+i+".png", alt="")
+								else
+									img(src="./img/clients_"+(i-3)+".png", alt="")
